@@ -504,6 +504,9 @@
     margin-top: 16px;
 
   }
+  .variety-brands__title{
+    max-width: calc(100% + 27px);
+  }
 }
 @media screen and(min-width: 1100px){
   .swiper{
