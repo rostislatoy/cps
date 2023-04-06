@@ -1,0 +1,239 @@
+@import '../scss/colorize.scss';
+
+
+.brands-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+
+  &.variety-brands__title{
+    position: relative;
+    height:auto;
+    background: linear-gradient(10deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    padding: 17px;
+    min-width: 100%;
+  }
+}
+.title-brands{
+  font-family: 'TTLakesLight';
+  color:$nav-text;
+}
+
+
+
+.swiper {
+  width: 100%;
+  min-height: 110px;
+  z-index: 0;
+  position: relative;
+  &.swiper-showed{
+    &.repear{
+      height: 200px;
+      &.names{
+        height: auto;
+        min-height: 250px;
+      }
+    }
+  }
+}
+
+.swiper-slide{
+  background-color: $white;
+  height: 72px;
+  display: flex;
+  width: 240px;
+  align-items: center;
+ 
+
+  &.brands-cards{
+    border-radius: 6px;
+    border: 1px solid $border-grey;
+    &.variety-repear{
+      height: 160px;
+      &.services{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        width: 260px;
+        height: 210px;
+        padding:16px;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  opacity: 1;
+  background-color:$bullet;
+}
+.swiper-pagination-bullet-active {
+  background: $bullet-active;
+}
+.around-btn-slide{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  
+  border: 2px solid $focus-pink;
+  background-color: $white ;
+}
+.brands-logo {
+  height:40px;
+  &.apple-logo {
+    height:44px;
+
+  }
+  &.bosch-logo {
+    height:32px;
+  }
+  &.hp-logo{
+    height:54px;
+
+  }
+  &.acer-logo{
+    height:22px;
+   
+  }
+  &.viewsonic-logo{
+    height: 18px;
+    
+  }
+  &.sony-logo{
+    height: 20px;
+    
+  }
+}
+.dropdown-pink{
+ width: 8px;
+}
+.slider__btn{
+  width:30%;
+  justify-content: center;
+  display: flex;
+  height:100%;
+  align-items: center;
+  &.variety-repear__btn-repear{
+    align-items: flex-end;
+    padding-bottom: 16px;
+  }
+}
+.slider__logo{
+  display: flex;
+  width:70%;
+  padding-left: 16px;
+  align-items: center;
+  height:100%;
+  &.smallest-logo{
+    justify-content: flex-start;
+    padding-left: 16px;
+  }
+  &.variety-repear__name-repear{
+    align-items: flex-start;
+    padding-top: 16px;
+    font-family: 'TTLakesRegular';
+    font-size: 16px;
+  }
+}
+.computer-view{
+  &.tablet-view{
+    display:none;
+  }
+}
+@media screen and(min-width:700px){
+  .computer-view{
+    &.tablet-view{
+      display:inline-flex;
+    }
+  }
+}
+
+.ellipse-btn-repear{
+  color:$white;
+  background-color: $focus-pink;
+  padding:8px 15px 8px 15px;
+  font-size:12px;
+  font-family: 'TTLakesRegular';
+  border-radius: 16px;
+  transition: transform 0.2s ease-in-out;
+  &:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(5px 5px 5px rgba(221, 12, 82, 0.6));
+  }
+}
+
+.title-repear{
+  display: block;
+  font-family: 'TTLakesLight';
+  font-size: 14px;
+  
+  &.terms{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 5px);
+
+    
+  }
+}
+.name-repear{
+  color:$nav-text;
+  font-family: 'TTLakesRegular';
+}
+.info-repear{
+  color: $black;
+  font-family: 'TTLakesLight';
+}
+
+.title-repear__services{
+  display: none;
+}
+
+.post-title{
+  width:100%;
+  margin-top:24px;
+  font-family: 'TTLakesLight';
+  padding-bottom: 16px;
+ 
+  &.commercial{
+    font-family: 'TTLakesRegular';
+    height: 50px;
+    max-width: 320px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
+
+.footer{
+  width: 100%;
+  height:auto;
+  padding-top: 40px;
+  display: inline-flex;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 24px;
+ ;
+}
+.footer-copyright-info{
+  width: 100%;
+  font-family: 'TTLakesLight';
+  color:$nav-text;
+  font-size: 14px;
+}
+

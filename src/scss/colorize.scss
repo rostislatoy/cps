@@ -1,0 +1,30 @@
+$bgColor: #24292e;
+$text: #fff;
+$logoH:60px;
+$logoW: 80px;
+$bg:#F8F8F8;
+$white:#fff;
+$text-check:#41F6D7;
+$focus-pink: #FF3E79;
+$nav-text:#7E7E82;
+$title-about-text: #1B1C21;
+$border-grey: #EAEAEA;
+$bullet-active: #B5B6BC;
+$bullet: #DDDDDD;
+$black: #000;
+
+@font-face {
+  font-family: 'TTLakesRegular';
+  src: url('../fonts/TTLakes-Medium.ttf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'TTLakesLight';
+  src: url('../fonts/TTLakes-Light.ttf');
+  font-weight:300;
+}
+@font-face {
+  font-family: 'TTLakesBold';
+  src: url('../fonts/TTLakes-Bold.ttf');
+  font-weight: 600;
+}
