@@ -1,4 +1,4 @@
-import '../scss/style.scss'
+import '../scss/header-main_title.scss'
 import '../scss/adaptive.scss'
 import '../scss/main-brands.scss'
 import '../scss/colorize.scss'
