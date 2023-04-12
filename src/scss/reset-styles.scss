@@ -1,0 +1,86 @@
+@import '../scss/colorize.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  button {
+    border: none;
+    cursor: pointer;
+  }
+  a {
+    cursor: pointer;
+  }
+  input,
+  textarea {
+    font-family: 'TTLakesRegular';
+    padding-left: 8px;
+    padding-right: 10px;
+    resize: none;
+  }
+  
+  ::-webkit-input-placeholder {
+    padding-left: 8px;
+  }
+  :-moz-placeholder {
+    padding-left: 8px;
+  }
+  ::-moz-placeholder {
+    padding-left: 8px;
+  }
+  :-ms-input-placeholder {
+    padding-left: 8px;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  main.active,
+  header.active {
+    filter: grayscale(87%) blur(6px) opacity(80%);
+    -webkit-filter: grayscale(87%) blur(6px) opacity(80%) ;
+    -moz-filter: grayscale(87%) blur(6px) opacity(80%) ;
+    transition: 0.3s ease-in-out;  
+  }
+  header.active {
+    z-index: 0;
+  }
+  main,
+  header {
+    transition: 0.3s ease-in-out;
+  }
+  
+  body {
+    background: $bg;
+    display: block;
+    &.modal-open{
+      height: 100vh;
+     overflow-y: hidden;
+    }
+  }
+  a {
+    text-decoration: none;
+    
+  }
+  ul {
+    text-decoration: none;
+    list-style: none;
+  }
+  li {
+    line-height: 2.7;
+  }
+  input{
+    outline: none;
+  }
+
+   
+  input[type="radio"]:checked, 
+  input[type="radio"]:not(:checked) 
+  {
+   opacity: 0;
+  }
+  input[type="radio"]:checked + label{
+    color:$text-check;
+  }

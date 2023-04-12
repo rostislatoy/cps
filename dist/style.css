@@ -32,14 +32,100 @@ textarea {
   padding-right: 10px;
   resize: none; }
 
-.overview {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  max-width: 2000px; }
+::-webkit-input-placeholder {
+  padding-left: 8px; }
+
+:-moz-placeholder {
+  padding-left: 8px; }
+
+::-moz-placeholder {
+  padding-left: 8px; }
+
+:-ms-input-placeholder {
+  padding-left: 8px; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+main.active,
+header.active {
+  filter: grayscale(87%) blur(6px) opacity(49%);
+  -webkit-filter: grayscale(87%) blur(6px) opacity(49%);
+  -moz-filter: grayscale(87%) blur(6px) opacity(49%);
+  transition: 0.3s ease-in-out; }
+
+header.active {
+  z-index: 0; }
+
+main,
+header {
+  transition: 0.3s ease-in-out; }
+
+body {
+  background: #F8F8F8;
+  display: block; }
+  body.modal-open {
+    height: 100vh;
+    overflow-y: hidden; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  text-decoration: none;
+  list-style: none; }
+
+li {
+  line-height: 2.7; }
+
+@font-face {
+  font-family: 'TTLakesRegular';
+  src: url(./fonts/TTLakes-Medium.ttf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'TTLakesLight';
+  src: url(./fonts/TTLakes-Light.ttf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'TTLakesBold';
+  src: url(./fonts/TTLakes-Bold.ttf);
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'TTLakesRegular';
+  src: url(./fonts/TTLakes-Medium.ttf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'TTLakesLight';
+  src: url(./fonts/TTLakes-Light.ttf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'TTLakesBold';
+  src: url(./fonts/TTLakes-Bold.ttf);
+  font-weight: 600; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+button {
+  border: none;
+  cursor: pointer; }
+
+a {
+  cursor: pointer; }
+
+input,
+textarea {
+  font-family: 'TTLakesRegular';
+  padding-left: 8px;
+  padding-right: 10px;
+  resize: none; }
 
 ::-webkit-input-placeholder {
   padding-left: 8px; }
@@ -80,10 +166,17 @@ body {
 a {
   text-decoration: none; }
 
+ul {
+  text-decoration: none;
+  list-style: none; }
+
+li {
+  line-height: 2.7; }
+
 .header {
   display: inline-flex;
   align-items: center;
-  justify-content: space-around;
+  flex-direction: row;
   position: fixed;
   top: 0;
   left: 0;
@@ -114,20 +207,15 @@ a {
   .around-btn:hover {
     transform: scale(1.1);
     box-shadow: 3px 11px 21px 2px rgba(92, 5, 32, 0.2); }
-  .around-btn.header-navbar-burger {
-    z-index: 121; }
+  .around-btn.header__burger {
+    z-index: 10; }
 
-.logo {
+.header__logo {
   display: flex;
   height: 60px;
   object-fit: cover;
   width: 97px;
   height: 51px; }
-
-.before-tool {
-  width: 2px;
-  height: 32px;
-  border-left: 2px solid #EAEAEA; }
 
 .menu {
   position: fixed;
@@ -146,13 +234,6 @@ a {
 
 .flexbox-toolbox {
   height: auto; }
-
-ul {
-  text-decoration: none;
-  list-style: none; }
-
-li {
-  line-height: 2.7; }
 
 .menu-navigation {
   width: 100%;
@@ -348,9 +429,6 @@ li {
 .computer-view {
   display: none; }
 
-.flexbox-tool {
-  display: none; }
-
 .feedback-menu {
   position: fixed;
   padding: 0% 16px 2.366% 16px;
@@ -463,6 +541,52 @@ li {
   .title__main-text:before {
     left: -41px !important; } }
 
+.tablet-view {
+  display: none; }
+
+.header__container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center; }
+  .header__container.burger-side {
+    justify-content: flex-start; }
+  .header__container.actions-side {
+    justify-content: flex-end; }
+
+.header--item {
+  margin: 0 8px; }
+
+.header__actions {
+  display: inline-flex; }
+
+.header__logo {
+  display: flex;
+  align-items: center; }
+  .header__logo::after {
+    content: "";
+    height: 32px;
+    border-left: 2px solid #EAEAEA;
+    position: relative;
+    border-radius: 36px;
+    left: 8px; }
+  .header__logo::before {
+    content: "";
+    height: 32px;
+    border-left: 2px solid #EAEAEA;
+    position: relative;
+    border-radius: 36px;
+    right: 8px;
+    display: none; }
+
+.header__btn-profile::after {
+  content: "";
+  height: 32px;
+  border-left: 2px solid #EAEAEA;
+  position: relative;
+  border-radius: 36px;
+  left: 18px; }
+
 @font-face {
   font-family: 'TTLakesRegular';
   src: url(./fonts/TTLakes-Medium.ttf);
@@ -478,6 +602,86 @@ li {
   src: url(./fonts/TTLakes-Bold.ttf);
   font-weight: 600; }
 
+@font-face {
+  font-family: 'TTLakesRegular';
+  src: url(./fonts/TTLakes-Medium.ttf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'TTLakesLight';
+  src: url(./fonts/TTLakes-Light.ttf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'TTLakesBold';
+  src: url(./fonts/TTLakes-Bold.ttf);
+  font-weight: 600; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+button {
+  border: none;
+  cursor: pointer; }
+
+a {
+  cursor: pointer; }
+
+input,
+textarea {
+  font-family: 'TTLakesRegular';
+  padding-left: 8px;
+  padding-right: 10px;
+  resize: none; }
+
+::-webkit-input-placeholder {
+  padding-left: 8px; }
+
+:-moz-placeholder {
+  padding-left: 8px; }
+
+::-moz-placeholder {
+  padding-left: 8px; }
+
+:-ms-input-placeholder {
+  padding-left: 8px; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+main.active,
+header.active {
+  filter: grayscale(87%) blur(6px) opacity(49%);
+  -webkit-filter: grayscale(87%) blur(6px) opacity(49%);
+  -moz-filter: grayscale(87%) blur(6px) opacity(49%);
+  transition: 0.3s ease-in-out; }
+
+header.active {
+  z-index: 0; }
+
+main,
+header {
+  transition: 0.3s ease-in-out; }
+
+body {
+  background: #F8F8F8;
+  display: block; }
+  body.modal-open {
+    height: 100vh;
+    overflow-y: hidden; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  text-decoration: none;
+  list-style: none; }
+
+li {
+  line-height: 2.7; }
+
 @media screen and (min-width: 391px) {
   .flexbox-toolbox {
     flex-basis: 20%; }
@@ -485,31 +689,11 @@ li {
     max-width: 320px;
     padding: 0px 24px 24px 24px; } }
 
-@media screen and (max-width: 520px) {
-  .header-navbar-btn-phone {
-    display: none; }
-  .header-navbar-tool_before {
-    display: none; } }
-
-@media screen and (max-width: 430px) {
-  .header-navbar-btn-message {
-    display: none; } }
-
-@media screen and (max-width: 366px) {
-  .header-navbar-btn-profile {
-    display: none; } }
-
 @media screen and (min-width: 700px) {
-  .flexbox-toolbox {
-    flex-basis: 30%; }
   .nav-logo {
     padding-left: 15px; }
   .lang-choose.ru {
     width: 40%; }
-  .first__before-tool {
-    display: inline-flex; }
-  .second__before-tool {
-    display: none; }
   .function {
     padding-top: 80px; } }
 
@@ -532,10 +716,6 @@ li {
 @media screen and (min-height: 1024px) {
   .function {
     padding-top: 279px; } }
-
-@media screen and (min-width: 900px) {
-  .flexbox-toolbox {
-    flex-basis: 40%; } }
 
 @media screen and (min-width: 1000px) {
   .feedback-menu {
@@ -571,7 +751,7 @@ li {
       height: 50vh;
       left: 0px;
       display: block; }
-  .header-fixed {
+  .header--fixed {
     margin-left: 306px;
     height: 20px;
     display: none; }
@@ -591,9 +771,6 @@ li {
     justify-content: space-around;
     width: 100%;
     height: 40px; }
-    .title-container.flexbox-tool {
-      flex-basis: 10%;
-      display: inline; }
     .title-container .feedback-title {
       position: relative;
       display: inline-block; }
@@ -624,9 +801,6 @@ li {
       position: relative;
       left: -28px;
       border-radius: 0px 4px 4px 0px; }
-
-.title-container.flexbox-tool {
-  flex-basis: 5%; }
 
 @media screen and (min-width: 1050px) {
   .title-container.flexbox-tool {
@@ -939,6 +1113,16 @@ li {
   .about-info.text {
     max-width: 40rem; } }
 
+@media screen and (min-width: 700px) {
+  .header__logo::before {
+    display: inline; }
+  .header__logo::after {
+    display: none; } }
+
+@media screen and (min-width: 700px) {
+  .tablet-view {
+    display: inline-block; } }
+
 @font-face {
   font-family: 'TTLakesRegular';
   src: url(./fonts/TTLakes-Medium.ttf);
@@ -953,6 +1137,86 @@ li {
   font-family: 'TTLakesBold';
   src: url(./fonts/TTLakes-Bold.ttf);
   font-weight: 600; }
+
+@font-face {
+  font-family: 'TTLakesRegular';
+  src: url(./fonts/TTLakes-Medium.ttf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'TTLakesLight';
+  src: url(./fonts/TTLakes-Light.ttf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'TTLakesBold';
+  src: url(./fonts/TTLakes-Bold.ttf);
+  font-weight: 600; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+button {
+  border: none;
+  cursor: pointer; }
+
+a {
+  cursor: pointer; }
+
+input,
+textarea {
+  font-family: 'TTLakesRegular';
+  padding-left: 8px;
+  padding-right: 10px;
+  resize: none; }
+
+::-webkit-input-placeholder {
+  padding-left: 8px; }
+
+:-moz-placeholder {
+  padding-left: 8px; }
+
+::-moz-placeholder {
+  padding-left: 8px; }
+
+:-ms-input-placeholder {
+  padding-left: 8px; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+main.active,
+header.active {
+  filter: grayscale(87%) blur(6px) opacity(49%);
+  -webkit-filter: grayscale(87%) blur(6px) opacity(49%);
+  -moz-filter: grayscale(87%) blur(6px) opacity(49%);
+  transition: 0.3s ease-in-out; }
+
+header.active {
+  z-index: 0; }
+
+main,
+header {
+  transition: 0.3s ease-in-out; }
+
+body {
+  background: #F8F8F8;
+  display: block; }
+  body.modal-open {
+    height: 100vh;
+    overflow-y: hidden; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  text-decoration: none;
+  list-style: none; }
+
+li {
+  line-height: 2.7; }
 
 .brands-section {
   position: relative;

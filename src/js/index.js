@@ -1,3 +1,4 @@
+import '../scss/reset-styles.scss'
 import '../scss/header-main_title.scss'
 import '../scss/adaptive.scss'
 import '../scss/main-brands.scss'
@@ -9,11 +10,11 @@ const menu = document.getElementById('menu')
 const body = document.querySelector('body')
 const menuBtnBack = document.getElementById('back-burger-btn')
 const main = document.querySelector('main')
-const menuPadding = document.querySelector('.padding-menu-box')
+const menuPadding = document.querySelector('.burger__body-container')
 const messageBtn = document.querySelector('.message')
-const messageBtnHeader = document.querySelector('.header-navbar-btn-message')
+const messageBtnHeader = document.querySelector('#header-navbar-btn-message')
 const phoneBtn = document.querySelector('.phone')
-const phoneBtnHeader = document.querySelector('.header-navbar-btn-phone')
+const phoneBtnHeader = document.querySelector('#header-navbar-btn-phone')
 const feedbackMenu = document.querySelector('.feedback-menu')
 const requestCallMenu = document.querySelector('.request-call')
 const cancelFeedbackMenu = document.querySelector('.feedback-menu-btn')
@@ -146,12 +147,8 @@ let newSwiper = new Swiper('.swiper', {
   slidesPerView: 'auto',
     
   breakpoints: {
-
-    700:{
-      slidesPerView: 1.5,
-    },
     700: {
-      lidesPerView: 4,
+      slidesPerView: 4,
       spaceBetween: 10,
       enabled: false,
     },
