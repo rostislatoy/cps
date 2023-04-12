@@ -10,7 +10,6 @@
     <title>trueProject</title>
   <link href="style.css" rel="stylesheet"></head>
 <body>
-
   <header class="header header--fixed">
     <div class="header__container burger-side">
       <button id="burger-btn" class="around-btn header__burger header--item">
@@ -39,30 +38,14 @@
       </ul>  
    </div>
   </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <div class="menu" id="menu">
- <div class="padding-menu-box">
-  <div class="header menu-container">
-  <button class="around-btn menu-back" id="back-burger-btn">
+ <aside class="burger" id="menu">
+ <div class="burger__body-container">
+  <div class="burger__header-container">
+  <button class="around-btn burger__close btn-close" id="back-burger-btn">
     <img class="icon header-navbar-cancel" src="img/cancel-icon.png">
   </button>
-  <object class="logo">
+  <object class="logo burger__logo">
+    <a href="#" class="burger__logo-link">
     <svg width="98" height="52" viewBox="0 0 98 52" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M36.5703 0.726074C36.018 0.726074 35.5703 1.17379 35.5703 1.72607V6.00103C35.5703 6.55331 36.018 7.00103 36.5703 7.00103H72.8973C83.0242 7.00103 90.9777 14.7977 90.9777 24.8905C90.9777 25.1761 91.2092 25.4076 91.4948 25.4076H96.757C97.0425 25.4076 97.274 25.1761 97.274 24.8905C97.274 11.4012 86.432 0.726074 72.8973 0.726074H36.5703Z" fill="#6B7B84" stroke="#80949F" stroke-width="0.5"/>
       <path fill-rule="evenodd" clip-rule="evenodd" d="M7.10658 25.846C7.10658 25.6039 6.91035 25.4077 6.66829 25.4077H1.16412C0.922059 25.4077 0.72583 25.6039 0.72583 25.846C0.72583 39.4954 10.9491 50.7649 24.1685 51.5024L66.5101 51.5402C67.0628 51.5406 67.511 51.0928 67.511 50.5402V45.9605C67.511 45.4083 67.0633 44.9605 66.511 44.9605H25.6263C15.3901 44.9322 7.10658 36.4168 7.10658 25.846Z" fill="#6B7B84" stroke="#80949F" stroke-width="0.5"/>
@@ -73,39 +56,50 @@
       <path fill-rule="evenodd" clip-rule="evenodd" d="M80.9528 24.6025C79.5051 23.3198 77.4843 22.5763 75.1908 21.8051C73.5567 21.2364 72.6563 20.9232 72.056 20.3759C71.5822 19.9737 71.371 19.5371 71.371 18.96C71.371 17.696 72.2299 16.3451 74.6412 16.3451C76.2799 16.3451 77.6519 17.0458 78.7194 18.4268L79.1432 18.9752L82.6595 14.4994L82.3389 14.1783C80.1884 12.0262 77.3546 10.8892 74.1437 10.8892C67.6654 10.8892 64.7655 15.1037 64.7655 19.2806C64.7655 21.522 65.5649 23.3298 67.1364 24.6513C68.5434 25.8572 70.2593 26.5329 71.9052 27.0845L72.0912 27.1461C73.5528 27.6292 75.0643 28.1292 75.9671 28.9372C76.5952 29.5143 76.8751 30.1414 76.8751 30.9705C76.8751 32.8706 75.3788 34.1475 73.1518 34.1475C71.3914 34.1475 69.0733 33.2846 67.8469 30.8634L67.5261 30.2291L63.1555 34.2748L63.4133 34.6394C64.8077 36.6138 67.9542 39.9262 73.3591 39.9262C79.3188 39.9262 83.4814 36.0946 83.4814 30.6089C83.4814 27.4712 82.1049 25.609 80.9528 24.6025Z" fill="#6B7B84"/>
       <path d="M80.9528 24.6025C79.5051 23.3198 77.4843 22.5763 75.1908 21.8051C73.5567 21.2364 72.6563 20.9232 72.056 20.3759C71.5822 19.9737 71.371 19.5371 71.371 18.96C71.371 17.696 72.2299 16.3451 74.6412 16.3451C76.2799 16.3451 77.6519 17.0458 78.7194 18.4268L79.1432 18.9752L82.6595 14.4994L82.3389 14.1783C80.1884 12.0262 77.3546 10.8892 74.1437 10.8892C67.6654 10.8892 64.7655 15.1037 64.7655 19.2806C64.7655 21.522 65.5649 23.3298 67.1364 24.6513C68.5434 25.8572 70.2593 26.5329 71.9052 27.0845L72.0912 27.1461C73.5528 27.6292 75.0643 28.1292 75.9671 28.9372C76.5952 29.5143 76.8751 30.1414 76.8751 30.9705C76.8751 32.8706 75.3788 34.1475 73.1518 34.1475C71.3914 34.1475 69.0733 33.2846 67.8469 30.8634L67.5261 30.2291L63.1555 34.2748L63.4133 34.6394C64.8077 36.6138 67.9542 39.9262 73.3591 39.9262C79.3188 39.9262 83.4814 36.0946 83.4814 30.6089C83.4814 27.4712 82.1049 25.609 80.9528 24.6025" stroke="#80949F" stroke-width="0.5"/>
       </svg>
+    </a>
     </object>
-  <div class="flexbox-toolbox"></div>
-  <button class="around-btn search-btn" id="search-btn">
+  <button class="around-btn burger__action" id="search-btn">
     <img class="icon header-navbar-search" src="img/search-icon.png">
   </button>
   </div>
-  <nav class="menu-navigation">
-    <ul>
-      <li class="nav-list">Ремонт техники</li>
-      <li class="nav-list">Услуги и сервисы</li>
-      <li class="nav-list">Корпоративным клиентам</li>
-      <li class="nav-list">Продавцам техники</li>
-      <li class="nav-list">Партнерам</li>
-      <li class="nav-list">Производителям</li>
-      <li class="nav-list">Наши сервисные центры</li>
-      <li class="nav-list">Контакты</li>
+  <nav class="burger__main-container">
+    <ul class="burger__navigation">
+      <li class="burger__list"><a class="burger__list--link" href="#">Ремонт техники</a></li>
+      <li class="burger__list"><a class="burger__list--link" href="#">Услуги и сервисы</a></li>
+      <li class="burger__list"><a class="burger__list--link" href="#">Корпоративным клиентам</a></li>
+      <li class="burger__list"><a class="burger__list--link" href="#">Продавцам техники</a></li>
+      <li class="burger__list"><a class="burger__list--link" href="#">Партнерам</a></li>
+      <li class="burger__list"><a class="burger__list--link" href="#">Производителям</a></li>
+      <li class="burger__list"><a class="burger__list--link" href="#">Наши сервисные центры</a></li>
+      <li class="burger__list"><a class="burger__list--link" href="#">Контакты</a></li>
     </ul>
   </nav>
- <div class="menu-more function">
-  <button class="around-btn navbar__menu phone"><img class="icon header-navbar-phone" src="img/phone-icon.png"></button>
-  <button class="around-btn navbar__menu message"><img class="icon header-navbar-message" src="img/message-icon.png"></button>
-  <button class="around-btn navbar__menu"><img class="icon header-navbar-profile" src="img/profile-icon.png"></button>
+ <div class="burger__footer-container burger__actions">
+  <button class="around-btn burger__action phone"><img class="icon header-navbar-phone" src="img/phone-icon.png"></button>
+  <button class="around-btn burger__action message"><img class="icon header-navbar-message" src="img/message-icon.png"></button>
+  <button class="around-btn burger__action"><img class="icon header-navbar-profile" src="img/profile-icon.png"></button>
   </div>
- <span class="menu-more mail">mail@cps.com</span>
-  <span class="menu-more number">8 800 890 8900</span>
+ <a href="mailto:mail@cps.com" class="burger__footer-container mail">mail@cps.com</a>
+  <a href="tel:+78008908900" class="burger__footer-container number">8 800 890 8900</a>
+   <div class="burger__footer-container lang">
+    <input type="radio" id="radio-ru" name="lang" class="lang-choose" checked="checked"><label for="radio-ru">RU</label>
+    <input type="radio" id="radio-en" name="lang" class="lang-choose"><label for="radio-en">EN</label>
+    <input type="radio" id="radio-ch" name="lang" class="lang-choose"><label for="radio-ch">CH</label>
+  </div>
+  </div>
+</aside>
 
-   <div class="menu-more lang">
-    <span class="lang-choose">RU</span>
-    <span class="lang-choose">EN</span>
-    <span class="lang-choose">CH</span>
-  </div>
-  </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
 <main class="main">
 <div class="main-padding-box title-box">
  <section class="main title-section">
@@ -491,9 +485,9 @@
   </section>
 </div></main>
 <div class="feedback-menu">
-  <div class="padding-menu-box feedback-box">
+  <div class="modal__body-container feedback-box">
     <div class="feedback-box header-btn">
-      <button class="around-btn menu-back feedback-menu-btn" id="feedback-menu-btn">
+      <button class="around-btn btn-close feedback-menu-btn" id="feedback-menu-btn">
         <img class="icon header-navbar-cancel" src="img/cancel-icon.png">
       </button> 
     </div>
@@ -512,9 +506,9 @@
  </div>
 </div>
 <div class="feedback-menu request-call">
-  <div class="padding-menu-box feedback-box">
+  <div class="modal__body-container feedback-box">
     <div class="feedback-box header-btn">
-      <button class="around-btn menu-back feedback-menu-btn" id="cancelRequestCallMenu">
+      <button class="around-btn btn-close feedback-menu-btn" id="cancelRequestCallMenu">
         <img class="icon header-navbar-cancel" src="img/cancel-icon.png">
       </button> 
     </div>
