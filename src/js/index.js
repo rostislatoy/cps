@@ -19,17 +19,66 @@ const feedbackMenu = document.querySelector('.feedback-menu')
 const requestCallMenu = document.querySelector('.request-call')
 const cancelFeedbackMenu = document.querySelector('.feedback-menu-btn')
 const cancelRequestCallMenu = document.querySelector('#cancelRequestCallMenu')
-const dots = document.getElementById("dots");
+
 const moreText = document.getElementById("more");
 const readMore = document.getElementById('read-more');
-const hidden = document.getElementById('hidden');
+const readMoreText = document.getElementById('read-more-text');
+
+const iconDropDownShow = document.getElementById('icon-dropdown-show')
+const showAllFirstSlider = document.getElementById('show-all-brands-section-icon')
 const readMoreBrands = document.getElementById('read-more-brands')
-const hiddenBrands = document.getElementById('hidden-brands')
+const readMoreBrandsText = document.getElementById('read-more-brands-text')
+
+
 const slides = document.querySelectorAll('.brands-cards')
-const swiperDiv = document.querySelector('#swiper')
+const swiperDiv = document.querySelector('#swiper-brand-section')
 const swiperDivVariety = document.querySelector('#swiper-variety')
 const readMoreBrandsVariety = document.getElementById('read-more-brands-variety')
-const hiddenBrandsVariety = document.getElementById('hidden-brands-variety')
+const readMoreBrandsVarietyText = document.getElementById('read-more-brands-variety-text')
+const showAllSecondSlider = document.getElementById("show-all-brands-section-icon-variety")
+readMoreBrandsVariety.onclick = function(){
+  if((swiperDivVariety.classList.contains('showed')) == false){
+  swiperDivVariety.classList.add('showed')
+  readMoreBrandsVarietyText.textContent = 'Скрыть';
+  showAllSecondSlider.classList.add('rotate');
+  }else{
+    swiperDivVariety.classList.remove('showed');
+    readMoreBrandsVarietyText.textContent = 'Показать все';
+    showAllFirstSlider.classList.remove('rotate');
+  }
+}
+
+readMoreBrands.onclick = function(){
+  if((swiperDiv.classList.contains('showed')) == false){
+  swiperDiv.classList.add('showed')
+  readMoreBrandsText.textContent = 'Скрыть';
+  showAllFirstSlider.classList.add('rotate');
+  }else{
+    swiperDiv.classList.remove('showed');
+    readMoreBrandsText.textContent = 'Показать все';
+    showAllFirstSlider.classList.remove('rotate');
+  }
+}
+
+
+
+
+readMore.onclick = function(){
+  if(moreText.classList.contains('active') == false){
+  moreText.classList.add('active')
+  readMoreText.textContent = 'Скрыть'
+  iconDropDownShow.classList.add('rotate')
+}else{
+  moreText.classList.remove('active')
+  readMoreText.textContent = 'Читать далее'
+  iconDropDownShow.classList.remove('rotate')
+}
+}
+
+
+
+
+
 
 burgerBtn.addEventListener('click',() =>  {
   menu.classList.add('active')
@@ -125,20 +174,7 @@ phoneBtn.addEventListener('click', ()=>{
 })
 
 
-if(readMore.classList.contains('active') === false){hidden.classList.add('active')}
-readMore.onclick = () =>{
-  readMore.classList.add('active')
-  moreText.classList.add('active')
-  hidden.classList.remove('active')
-}
 
-
-hidden.onclick = () => {
- 
-  hidden.classList.add('active')
-  moreText.classList.remove('active')
-  readMore.classList.remove('active')
-}
 
 
 let newSwiper = new Swiper('.swiper', {
@@ -160,29 +196,5 @@ let newSwiper = new Swiper('.swiper', {
   },
 });
 
-hiddenBrands.style.display = 'none';
 
-readMoreBrands.onclick = function (){
-  swiperDiv.style.height = 'auto';
-  readMoreBrands.style.display = 'none'
-  hiddenBrands.style.display = 'inline-flex'
-}
-hiddenBrands.onclick = function (){
-  swiperDiv.style.height = 200 + 'px';
-  hiddenBrands.style.display = 'none'
-  readMoreBrands.style.display = 'inline-flex'
-}
-
-hiddenBrandsVariety.style.display = 'none';
-
-readMoreBrandsVariety.onclick = function (){
-  swiperDivVariety.style.height = 'auto';
-  readMoreBrandsVariety.style.display = 'none'
-  hiddenBrandsVariety.style.display = 'inline-flex'
-}
-hiddenBrandsVariety.onclick = function (){
-  swiperDivVariety.style.height = 200 + 'px';
-  hiddenBrandsVariety.style.display = 'none'
-  readMoreBrandsVariety.style.display = 'inline-flex'
-}
 

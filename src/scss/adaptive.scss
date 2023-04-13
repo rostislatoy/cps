@@ -4,7 +4,7 @@
 
 
 
-@media screen and(min-width: 391px){
+@media screen and (min-width: 391px){
   .burger{
     max-width: 320px;
     padding: 0px 24px 24px 24px;
@@ -60,8 +60,11 @@
   .feedback-menu{
     max-width:440px;
   }
- 
-  .about-info{
+  .footer{
+    margin-left: 306px;
+   max-width: calc(100vw - 306px);
+  }
+  .services__about-info{
     width:35vw;
   }
   .burger {
@@ -90,16 +93,15 @@
   left: 306px; 
   max-width: calc(100vw - 306px);
   top:42px;
+ 
   } 
 
-  .main-padding-box {
+  .main__container {
    top: 0;
-   padding-left: 24px;
     &.title-box{
-    height: 50vh;
     left:0px;
     display: block;
-
+  
    }
   }
   .header--fixed{
@@ -143,158 +145,24 @@
     display: flex;
 
   }
+  .services__title--container{
+    width: 50%;
+  }
 }
 
 
-  .title__main-text{
-     position: relative;
-    left:0;
-    &:before{
-      content:"";
-      height:40px;
-      border-left:4px solid $text-check;
-      position: relative;
-      right: 98%;
-      border-radius:0px 4px 4px 0px;
-    }
-    &.feedback-title-text{
-      position: relative;
-      left: 0px;
-      &:before{
-        content:"";
-        height:60px;
-        border-left:4px solid $text-check;
-        position: relative;
-        left:-28px;
-        border-radius:0px 4px 4px 0px;
-      }
-    }
-}
 
-
-@media screen and(min-width: 1100px){
-  .title-container{
-   &.flexbox-tool{
-     flex-basis: 17% !important;
-    
-   }
-  }
-}  
-@media screen and(min-width: 1200px){
-  .title-container{
-   &.flexbox-tool{
-     flex-basis: 28% !important;
-    
-   }
-  }
-}  
-@media screen and(min-width: 1222px){
-  .title-container{
-   &.flexbox-tool{
-     flex-basis: 31% !important;
-    
-   }
-  }
-}  
- 
-@media screen and(min-width: 1300px){
-  .title-container{
-   &.flexbox-tool{
-     flex-basis: 38% !important;
-    
-   }
-  }
-}  
-@media screen and(min-width: 1400px){
-  .title-container{
-   &.flexbox-tool{
-     flex-basis: 43% !important;
-    
-   }
-  }
-}  
-@media screen and(min-width: 1450px){
-  .title-container{
-   &.flexbox-tool{
-     flex-basis: 46% !important;
-    
-   }
-  }
-}  
-@media screen and(min-width: 1500px){
-  .title-container{
-   &.flexbox-tool{
-     flex-basis: 48% !important;
-    
-   }
-  }
-  .main{
-    padding: 14px;
-  }
-}  
-@media screen and(min-width: 1600px){
-  .title-container{
-   &.flexbox-tool{
-     flex-basis: 51%;
-    
-   }
-  }
-  .main{
-    padding: 12px;
-  }
-}  
-@media screen and(min-width: 1700px){
-  .title-container{
-   &.flexbox-tool{
-     flex-basis: 56%;
-    
-   }
-  }
-  .main{
-    padding: 10px;
-  }
-}  
-@media screen and(min-width: 1800px){
-  .title-container{
-   &.flexbox-tool{
-     flex-basis: 59%;
-    
-   }
-  }
-  .main{
-    padding: 8px;
-  }
-}  
-@media screen and(min-width: 1900px){
-  .title-container{
-    &.flexbox-tool{
-     flex-basis: 61%;
-    
-   }
-  }
-  .main{
-    padding: 2px;
-  }
-}
-@media screen and(min-width: 2000px){
-  .title-container{
-    &.flexbox-tool{
-     flex-basis: 64%;
-    
-   }
-  }
-}
 
 
 @media  screen and(max-width:699px){
-  .title-section__about-info{
+  .services__about{
     display: block;
    
     width: 100%; 
     height: auto;
     
    }
-   .about-info{
+   .services__about-info{
      line-height: 143%;
      width: 100%;
 
@@ -316,14 +184,14 @@
 }
 
 @media  screen and(max-width:520px){
-  .title-section__about-info{
+  .services_about{
     display: block;
    
     width: 100%; 
     height: auto;
     
    }
-   .about-info{
+   .services__about-info{
      line-height: 143%;
      width: 100%;
 
@@ -407,7 +275,9 @@
       display: inline-flex;
     }
   }
-  
+  .variety-repear.services{
+    min-width: 100% !important;
+  }
 }
 @media screen and(min-width: 760px){
   .swiper{
@@ -450,7 +320,7 @@
     margin-top: 16px;
 
   }
-  .variety-brands__title{
+  .brands-section__title{
     max-width: calc(100% + 27px);
   }
 }
@@ -557,7 +427,7 @@
   }
 }
 
-@media screen and(min-width:320px) {
+@media screen and(min-width:120px) {
   .swiper-slide{
     display: inline-flex;
     justify-content: space-around;
