@@ -12,10 +12,10 @@
 <body>
   <header class="header header--fixed">
     <div class="header__container burger-side">
-      <button id="burger-btn" class="around-btn header__burger header--item">
+      <button id="burger-btn" class="around-btn header__burger header__item">
         <img class="icon header__burger-icon" src="img/burger-icon.png">
       </button>
-      <object class="header__logo header--item">
+      <object class="header__logo header__item">
         <svg width="98" height="52" viewBox="0 0 98 52" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M36.5703 0.726074C36.018 0.726074 35.5703 1.17379 35.5703 1.72607V6.00103C35.5703 6.55331 36.018 7.00103 36.5703 7.00103H72.8973C83.0242 7.00103 90.9777 14.7977 90.9777 24.8905C90.9777 25.1761 91.2092 25.4076 91.4948 25.4076H96.757C97.0425 25.4076 97.274 25.1761 97.274 24.8905C97.274 11.4012 86.432 0.726074 72.8973 0.726074H36.5703Z" fill="#6B7B84" stroke="#80949F" stroke-width="0.5"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M7.10658 25.846C7.10658 25.6039 6.91035 25.4077 6.66829 25.4077H1.16412C0.922059 25.4077 0.72583 25.6039 0.72583 25.846C0.72583 39.4954 10.9491 50.7649 24.1685 51.5024L66.5101 51.5402C67.0628 51.5406 67.511 51.0928 67.511 50.5402V45.9605C67.511 45.4083 67.0633 44.9605 66.511 44.9605H25.6263C15.3901 44.9322 7.10658 36.4168 7.10658 25.846Z" fill="#6B7B84" stroke="#80949F" stroke-width="0.5"/>
@@ -30,11 +30,11 @@
     </div>
     <div class="header__container actions-side">
       <ul class="header__actions">
-        <li class="header__action tablet-view"><button id="header-navbar-btn-phone" class="around-btn header__btn-phone header--item"><img class="icon header-navbar-phone" src="img/phone-icon.png"></button></li>
-        <li class="header__action tablet-view"><button id="header-navbar-btn-message" class="around-btn header__btn-message header--item"><img class="icon header-navbar-message" src="img/message-icon.png"></button></li>
-        <li class="header__action tablet-view"><button class="around-btn header__btn-profile header--item"><img class="icon header-navbar-profile" src="img/profile-icon.png"></button></li>
-        <li class="header__action"><button class="around-btn header__btn-tool header--item"><img class="icon header-navbar-tools" src="img/tools-icon.png"></button></li>
-        <li class="header__action"><button id="question-btn" class="around-btn header__btn-search header--item"><img class="icon header-navbar-checkstatus" src="img/checkstatus-icon.png"></button></li>
+        <li class="header__action tablet-view"><button id="header-navbar-btn-phone" class="around-btn header__btn-phone header__item"><img class="icon header-navbar-phone" src="img/phone-icon.png"></button></li>
+        <li class="header__action tablet-view"><button id="header-navbar-btn-message" class="around-btn header__btn-message header__item"><img class="icon header-navbar-message" src="img/message-icon.png"></button></li>
+        <li class="header__action tablet-view"><button class="around-btn header__btn-profile header__item"><img class="icon header-navbar-profile" src="img/profile-icon.png"></button></li>
+        <li class="header__action"><button class="around-btn header__btn-tool header__item"><img class="icon header-navbar-tools" src="img/tools-icon.png"></button></li>
+        <li class="header__action"><button id="question-btn" class="around-btn header__btn-search header__item"><img class="icon header-navbar-checkstatus" src="img/checkstatus-icon.png"></button></li>
       </ul>  
    </div>
   </header>
@@ -88,288 +88,343 @@
   </div>
   </div>
 </aside>
-
-
-
-
-
-
-
-
-
-
-
-
 <main class="main">
-<div class="main-padding-box title-box">
- <section class="main title-section">
-  <div class="title-section title-container"><p class="title__main-text">Услуги и сервисы</p> 
-  <div class="title-container flexbox-tool"></div>
-    <label class="title-container section__title-tools__label computer-view">Оставить заявку</label>  
+  <div class="main__container">
+ <section class="main__services services">
+  <div class="services__title--container title-side">
+    <h1 class="services__title">Услуги и сервисы</h1> 
+ </div>
+  <div class="services__title--container actions-side">
+    <ul class="services__actions">
+    <li class="title-container section__title-tools__label computer-view">Оставить заявку</li>  
     <button class="around-btn header-navbar-tool computer-view">
       <img class="icon header-navbar-tools" src="img/tools-icon.png">
     </button>
-    <label class="title-container section__title-tools__label computer-view">Статус ремонта</label>  
+    <li class="title-container section__title-tools__label computer-view">Статус ремонта</li>  
     <button class="around-btn header-navbar-tool computer-view">
       <img class="icon header-navbar-checkstatus" src="img/checkstatus-icon.png">
     </button>
-  </div>
-  <div class="nav-list-main">
-    <div class="nav-list-main scroll-box"><span>Ремонтируемые бренды</span></div>
-    <div class="nav-list-main scroll-box"><span>Дополнительные услуги</span></div>
-    <div class="nav-list-main scroll-box"><span>Цены на услуги</span></div>
-    <div class="nav-list-main scroll-box"><span>Адреса сервисных центров</span></div>
-    <div class="nav-list-main scroll-box"><span>Cпециальные цены</span></div>
-  </div>
-  <div class="title-section__about-info"> 
-<div class="about-infos">
-    <div class="about-info text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br> <br>
+    </ul>
+</div>
+</section></div>
+  <menu class="menu">
+    <button class="menu scroll--item"><span>Ремонтируемые бренды</span></button>
+    <button class="menu scroll--item"><span>Дополнительные услуги</span></button>
+    <button class="menu scroll--item"><span>Цены на услуги</span></button>
+    <button class="menu scroll--item"><span>Адреса сервисных центров</span></button>
+    <button class="menu scroll--item"><span>Cпециальные цены</span></button>
+  </menu>
+
+  <div class="services__about"> 
+  <div class="services__about-infos">
+    <p class="services__about-info text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br> <br>
       Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span id="more"> Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
       Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
-      Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span></div>
-    <button class="about-info btn" id="read-more"><img src="img/read-more.png" class="icon-dropdown show"><p class="btn show">Читать далее</p></button>
-    <button class="about-info btn" id="hidden"><img src="img/read-more.png" class="icon-dropdown show-reverse"><p class="btn show">Скрыть</p></button>
+      Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span>
+    </p>
+    <button class="services__about-info btn" id="read-more">
+      <img src="img/read-more.png" id="icon-dropdown-show" class="icon-dropdown show">
+      <span id="read-more-text">Читать далее</span>
+    </button>
 </div>
-    <div class="about-infos">
-       <picture>
-      <img class="about-info image" src="img/cps-main.jpg">
-    </picture>
-</div>
-  </div>
-</section>  
+    <div class="services__about-infos">
+        <picture>
+           <img class="services__about-info image" src="img/cps-main.jpg">
+        </picture>
+        </div>
+      </div>
+  
+  
 <section class="brands-section">
-  <div class="brands-section variety-brands__title">
-    <p class="title-brands variety-brands__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</p>
-  </div>
-<div class="brand-section swiper swiper-showed" id="swiper">
+  <div class="main__container">
+  <h1 class="brands-section brands-section__title">
+    РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ
+  </h1>
+<div class="brand-section swiper swiper-showed" id="swiper-brand-section">
   <div class="swiper-wrapper">
-    <div class="swiper-slide brands-cards">
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo">
-      <img src="img/Lenovo-logo.png" class="brands-logo">
+      <img src="img/Lenovo-logo.svg" class="brands-logo">
       </div>
     <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
     </div>
-    </div>
-    <div class="swiper-slide brands-cards">
+    </a>
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo">
-      <img src="img/Samsung-logo.png" class="brands-logo">
+      <img src="img/Samsung-logo.svg" class="brands-logo">
       </div>
     <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
     </div>
-    </div>
-    <div class="swiper-slide brands-cards">
+    </a>
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo smallest-logo">
-      <img src="img/Apple-logo.png" class="brands-logo apple-logo">
+      <img src="img/Apple-logo.svg" class="brands-logo apple-logo">
       </div>
       <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
     </div>
-    </div>
-    <div class="swiper-slide brands-cards">
+    </a>
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo">
-      <img src="img/Bosch-logo.png" class="brands-logo bosch-logo">
+      <img src="img/Bosch-logo.svg" class="brands-logo bosch-logo">
       </div>
       <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
      </div>
-    </div>
-    <div class="swiper-slide brands-cards">
+    </a>
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo smallest-logo">
-      <img src="img/Hp-logo.png" class="brands-logo hp-logo">
+      <img src="img/Hp-logo.svg" class="brands-logo hp-logo">
       </div>
       <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div>
-    <div class="swiper-slide brands-cards">
+    </a>
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo">
-      <img src="img/Acer-logo.png" class="brands-logo acer-logo">
+      <img src="img/Acer-logo.svg" class="brands-logo acer-logo">
       </div>
       <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div> 
-    <div class="swiper-slide brands-cards">
+    </a> 
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo">
-      <img src="img/ViewSonic-logo.png" class="brands-logo viewsonic-logo">
+      <img src="img/ViewSonic-logo.svg" class="brands-logo viewsonic-logo">
       </div>
       <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div>
-    <div class="swiper-slide brands-cards">
+    </a>
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo">
-      <img src="img/Sony-logo.png" class="brands-logo sony-logo">
+      <img src="img/Sony-logo.svg" class="brands-logo sony-logo">
       </div>
       <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div>
-    <div class="swiper-slide brands-cards">
+    </a>
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo">
-      <img src="img/Lenovo-logo.png" class="brands-logo">
+      <img src="img/Lenovo-logo.svg" class="brands-logo">
       </div>
       <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div>
-    <div class="swiper-slide brands-cards">
+    </a>
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo">
-      <img src="img/Samsung-logo.png" class="brands-logo">
+      <img src="img/Samsung-logo.svg" class="brands-logo">
       </div>
       <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div>
-    <div class="swiper-slide brands-cards">
+    </a>
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo">
-      <img src="img/Apple-logo.png" class="brands-logo apple-logo">
+      <img src="img/Apple-logo.svg" class="brands-logo apple-logo">
       </div>
       <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div>
-    <div class="swiper-slide brands-cards">
+    </a>
+    <a href="link" class="swiper-slide brands-cards">
       <div class="slider__logo">
-      <img src="img/Bosch-logo.png" class="brands-logo bosch-logo">
+      <img src="img/Bosch-logo.svg" class="brands-logo bosch-logo">
       </div>
       <div class="slider__btn">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div>
+    </a>
   </div>
   <div class="swiper-pagination"></div>
 </div> 
-<button class="about-info btn computer-view tablet-view" id="read-more-brands">
-  <img src="img/read-more.png" class="icon-dropdown show">
-  <p class="btn show computer-view tablet-view">Показать все</p>
+<button class="services__about-info btn tablet-view" id="read-more-brands">
+  <img src="img/read-more.png" id="show-all-brands-section-icon" class="icon-dropdown show tablet-view">
+  <span id="read-more-brands-text" class="btn show tablet-view">Показать все</span>
 </button>
-<button class="about-info btn computer-view tablet-view" id="hidden-brands">
-  <img src="img/read-more.png" class="icon-dropdown show-reverse computer-view tablet-view">
-  <p class="btn show">Скрыть</p>
-</button>
+</div>
 </section>
 <section class="brands-section">
-  <div class="brands-section variety-brands__title">
-    <p class="title-brands variety-brands__title">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</p>
-  </div>
+  <div class="main__container">
+  <h1 class="brands-section brands-section__title">
+    РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ
+  </h1>
 <div class="brand-section swiper swiper-showed repear" id="swiper-variety">
   <div class="swiper-wrapper">
-    <div class="swiper-slide brands-cards variety-repear">
+    <a href="link" class="swiper-slide brands-cards variety-repear">
       <div class="slider__logo variety-repear__name-repear">
       <p class="brands-logo variety-repear__name-repear">Ремонт ноутбуков</p>
       </div>
     <div class="slider__btn variety-repear__btn-repear">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
     </div>
-    </div>
-    <div class="swiper-slide brands-cards variety-repear">
+    </a>
+    <a href="link" class="swiper-slide brands-cards variety-repear">
       <div class="slider__logo variety-repear__name-repear">       
          <p class="brands-logo variety-repear__name-repear">Ремонт планшетов</p>      </div>
     <div class="slider__btn variety-repear__btn-repear">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
     </div>
-    </div>
-    <div class="swiper-slide brands-cards variety-repear">
+    </a>
+    <a href="link" class="swiper-slide brands-cards variety-repear">
       <div class="slider__logo smallest-logo variety-repear__name-repear">
         <p class="brands-logo variety-repear__name-repear">Ремонт ПК</p>      </div>
       <div class="slider__btn variety-repear__btn-repear">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
     </div>
-    </div>
-    <div class="swiper-slide brands-cards variety-repear">
+    </a>
+    <a href="link" class="swiper-slide brands-cards variety-repear">
       <div class="slider__logo variety-repear__name-repear">
         <p class="brands-logo variety-repear__name-repear">Ремонт мониторов</p>      </div>
       <div class="slider__btn variety-repear__btn-repear">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
      </div>
-    </div>
-    <div class="swiper-slide brands-cards variety-repear">
+    </a>
+    <a href="link" class="swiper-slide brands-cards variety-repear">
       <div class="slider__logo smallest-logo variety-repear__name-repear">
         <p class="brands-logo variety-repear__name-repear">Ремонт ноутбуков</p>      </div>
       <div class="slider__btn variety-repear__btn-repear">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div>
-    <div class="swiper-slide brands-cards variety-repear">
+    </a>
+    <a href="link" class="swiper-slide brands-cards variety-repear">
       <div class="slider__logo variety-repear__name-repear">
         <p class="brands-logo variety-repear__name-repear">Ремонт планшетов</p>      </div>
       <div class="slider__btn variety-repear__btn-repear">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div> 
-    <div class="swiper-slide brands-cards variety-repear">
+    </a> 
+    <a href="link" class="swiper-slide brands-cards variety-repear">
       <div class="slider__logo variety-repear__name-repear">
         <p class="brands-logo variety-repear__name-repear">Ремонт мониторов</p>      </div>
       <div class="slider__btn variety-repear__btn-repear">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div>
-    <div class="swiper-slide brands-cards variety-repear">
+    </a>
+    <a href="link" class="swiper-slide brands-cards variety-repear">
       <div class="slider__logo variety-repear__name-repear">
         <p class="brands-logo variety-repear__name-repear">Ремонт ПК</p>      </div>
       <div class="slider__btn variety-repear__btn-repear">
       <div class="around-btn-slide">
-        <img class="dropdown-pink" src="img/dropdown-pink.png">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="19" stroke="#FF3E79" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
+          </svg>
       </div>
       </div>
-    </div>
+    </a>
   </div>
   <div class="swiper-pagination"></div>
 </div> 
-<button class="about-info btn computer-view tablet-view" id="read-more-brands-variety">
-  <img src="img/read-more.png" class="icon-dropdown show">
-  <p class="btn show computer-view tablet-view">Показать все</p>
+<button class="services__about-info btn tablet-view" id="read-more-brands-variety">
+  <img src="img/read-more.png" class="icon-dropdown show" id="show-all-brands-section-icon-variety">
+  <span class="btn show tablet-view" id="read-more-brands-variety-text">Показать все</span>
 </button>
-<button class="about-info btn computer-view tablet-view" id="hidden-brands-variety">
-  <img src="img/read-more.png" class="icon-dropdown show-reverse">
-  <p class="btn show">Скрыть</p>
-</button>
+</div>
 </section>
 <section class="brands-section">
-  <div class="brands-section variety-brands__title">
-    <p class="title-brands variety-brands__title">ЦЕНЫ НА УСЛУГИ</p>
-  </div>
+  <div class="" main__container>
+  <h1 class="brands-section brands-section__title">
+    ЦЕНЫ НА УСЛУГИ
+  </h1>
   <div class="title-repear__services">
     <div class="title-repear name-repear">
       <p class="name-repear">Ремонтные услуги</p>
@@ -472,18 +527,21 @@
   </div>
   <div class="swiper-pagination"></div>
 </div>
+</div>
 </section>
 <section class="brands-section">
+<div class="main__container">
 <p class="post-title">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
 <span class="post-title commercial">Получить коммерческое предложение <img class="dropdown-pink commercial" src="img/dropdown-pink.png"></span>
+</div>
 </section>
-<section class="footer">
+</main>
+<footer class="footer">
   <p class="footer-copyright-info">© 2019 CPS<br>
     Разработано командой Apesong </p><br>
   <p class="footer-copyright-info">Политика конфиденциальности</p><br>
-  <p class="footer-copyright-info">Информация, размещенная на данной странице, не является публичной офертой</p><br>
-  </section>
-</div></main>
+  <p class="footer-copyright-info">Информация, размещенная на данной странице, не является публичной офертой<br></p><br>
+  </footer>
 <div class="feedback-menu">
   <div class="modal__body-container feedback-box">
     <div class="feedback-box header-btn">
@@ -492,7 +550,7 @@
       </button> 
     </div>
   <div class="title-section feedback-title-section">
-    <p class="feedback-box title__main-text feedback-title-text">Обратная связь</p> 
+    <p class="feedback-box services__title feedback-title-text">Обратная связь</p> 
   </div>
   <div class="feedback-box inputs-box">
     <input type="text" class="feedback-inputs" placeholder="Имя">
@@ -513,7 +571,7 @@
       </button> 
     </div>
   <div class="title-section feedback-title-section">
-    <p class="feedback-box title__main-text feedback-title-text">Заказать звонок</p> 
+    <p class="feedback-box services__title feedback-title-text">Заказать звонок</p> 
   </div>
   <div class="feedback-box inputs-box">
     <input type="phone" class="feedback-inputs" placeholder="Телефон">
@@ -521,7 +579,7 @@
  <p class="feedback-box text-accept">Нажимая “отправить”, вы даете согласие на <span class="text-accept red">обработку персональных данных</span> и соглашаетесь с нашей <span class="text-accept red">политикой конфиденциальности</span></p>
  <div class="feedback-box footer-btn">
    <a href="#" class="ellipse-btn">ОТПРАВИТЬ<img class="icon-dropdown" src="img/icon-dropdown.png"></a>
- </div>
+ </div> 
 </div> 
 
 <script type="text/javascript" src="./js/bundle.js"></script></div></div></body>
