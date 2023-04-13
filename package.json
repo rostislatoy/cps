@@ -63,6 +63,7 @@
   },
   "homepage": "https://github.com/jm-program/webpack-static-template#readme",
   "dependencies": {
-    "swiper": "^9.2.0"
+    "swiper": "^9.2.0",
+    "vivus": "^0.4.6"
   }
 }
