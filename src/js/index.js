@@ -19,49 +19,26 @@ const feedbackMenu = document.querySelector('.feedback-menu')
 const requestCallMenu = document.querySelector('.request-call')
 const cancelFeedbackMenu = document.querySelector('.feedback-menu-btn')
 const cancelRequestCallMenu = document.querySelector('#cancelRequestCallMenu')
-
 const moreText = document.getElementById("more");
 const readMore = document.getElementById('read-more');
 const readMoreText = document.getElementById('read-more-text');
-
 const iconDropDownShow = document.getElementById('icon-dropdown-show')
 const showAllFirstSlider = document.getElementById('show-all-brands-section-icon')
 const readMoreBrands = document.getElementById('read-more-brands')
 const readMoreBrandsText = document.getElementById('read-more-brands-text')
-
-
-const slides = document.querySelectorAll('.brands-cards')
 const swiperDiv = document.querySelector('#swiper-brand-section')
 const swiperDivVariety = document.querySelector('#swiper-variety')
 const readMoreBrandsVariety = document.getElementById('read-more-brands-variety')
 const readMoreBrandsVarietyText = document.getElementById('read-more-brands-variety-text')
 const showAllSecondSlider = document.getElementById("show-all-brands-section-icon-variety")
-readMoreBrandsVariety.onclick = function(){
-  if((swiperDivVariety.classList.contains('showed')) == false){
-  swiperDivVariety.classList.add('showed')
-  readMoreBrandsVarietyText.textContent = 'Скрыть';
-  showAllSecondSlider.classList.add('rotate');
-  }else{
-    swiperDivVariety.classList.remove('showed');
-    readMoreBrandsVarietyText.textContent = 'Показать все';
-    showAllFirstSlider.classList.remove('rotate');
-  }
-}
-
-readMoreBrands.onclick = function(){
-  if((swiperDiv.classList.contains('showed')) == false){
-  swiperDiv.classList.add('showed')
-  readMoreBrandsText.textContent = 'Скрыть';
-  showAllFirstSlider.classList.add('rotate');
-  }else{
-    swiperDiv.classList.remove('showed');
-    readMoreBrandsText.textContent = 'Показать все';
-    showAllFirstSlider.classList.remove('rotate');
-  }
-}
 
 
 
+
+
+
+
+// читать далее/скрыть - титульная секция
 
 readMore.onclick = function(){
   if(moreText.classList.contains('active') == false){
@@ -76,9 +53,36 @@ readMore.onclick = function(){
 }
 
 
+// показать/скрыть - бренд-секция
+
+readMoreBrands.onclick = function(){
+  if((swiperDiv.classList.contains('showed')) == false){
+  swiperDiv.classList.add('showed')
+  readMoreBrandsText.textContent = 'Скрыть';
+  showAllFirstSlider.classList.add('rotate');
+  }else{
+    swiperDiv.classList.remove('showed');
+    readMoreBrandsText.textContent = 'Показать все';
+    showAllFirstSlider.classList.remove('rotate');
+  }
+}
+
+// показать/скрыть - ремонт-секция
+
+readMoreBrandsVariety.onclick = function(){
+  if((swiperDivVariety.classList.contains('showed')) == false){
+  swiperDivVariety.classList.add('showed')
+  readMoreBrandsVarietyText.textContent = 'Скрыть';
+  showAllSecondSlider.classList.add('rotate');
+  }else{
+    swiperDivVariety.classList.remove('showed');
+    readMoreBrandsVarietyText.textContent = 'Показать все';
+    showAllFirstSlider.classList.remove('rotate');
+  }
+}
 
 
-
+// бургер кнопки и взаимодействие с меню
 
 burgerBtn.addEventListener('click',() =>  {
   menu.classList.add('active')
@@ -114,6 +118,8 @@ main.addEventListener('click', (e) => {
     body.classList.remove('modal-open')
   }
 })
+
+// модалки
 
 messageBtn.addEventListener('click', () =>{
   header.classList.add('active')
@@ -176,6 +182,7 @@ phoneBtn.addEventListener('click', ()=>{
 
 
 
+// тут все понятно ;)
 
 let newSwiper = new Swiper('.swiper', {
   direction: 'horizontal',
