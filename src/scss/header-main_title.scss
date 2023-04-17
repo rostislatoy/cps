@@ -431,9 +431,7 @@
   }
 }
 
-#more {
-  display: none;
-}
+
 
 .services__about {
   display: flex;
@@ -473,7 +471,7 @@
     padding-right: 15px;
   }
 }
-#more {
+.more-title-text {
   display: none;
   &.active {
     display: inline;
@@ -539,6 +537,6 @@
 .header-navbar-tool{
   margin: 0 6px;
 }
-#icon-dropdown-show.rotate{
+#icon-dropdown-show.rotate--icon{
   transform: rotate(180deg);
 }

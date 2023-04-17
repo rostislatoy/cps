@@ -29,11 +29,7 @@
     
   }
   
-  .feedback-menu{
-    max-width:440px;
-    padding-left: 28px;
-    padding-right: 28px;
-  }
+
 }
 @media screen and(min-height:750px){
   .burger__actions{
@@ -487,6 +483,11 @@
 @media screen and (min-width: 600px){
   .post-title{
     width: 420px !important;
+  }
+  .feedback-menu{
+    max-width:440px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 @media screen and (max-width:700px){
