@@ -1,85 +1,120 @@
-import '../scss/reset-styles.scss'
-import '../scss/header-main_title.scss'
-import '../scss/adaptive.scss'
-import '../scss/main-brands.scss'
-import '../scss/colorize.scss'
+import '../scss/reset-styles.scss';
+import '../scss/header-main_title.scss';
+import '../scss/adaptive.scss';
+import '../scss/main-brands.scss';
+import '../scss/colorize.scss';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 const header = document.querySelector('header')
-const burgerBtn = document.querySelector('#burger-btn')
-const menu = document.getElementById('menu')
+const burgerBtn = header.querySelector('.burger-btn')
+const menu = document.querySelector('aside')
 const body = document.querySelector('body')
-const menuBtnBack = document.getElementById('back-burger-btn')
+const menuBtnBack = menu.querySelector('.back-burger-btn')
 const main = document.querySelector('main')
 const menuPadding = document.querySelector('.burger__body-container')
-const messageBtn = document.querySelector('.message')
-const messageBtnHeader = document.querySelector('#header-navbar-btn-message')
-const phoneBtn = document.querySelector('.phone')
-const phoneBtnHeader = document.querySelector('#header-navbar-btn-phone')
+const messageBtn = menu.querySelector('.message')
+const messageBtnHeader = header.querySelector('.header__btn-message')
+const phoneBtn = menu.querySelector('.phone')
+const phoneBtnHeader = header.querySelector('.header__btn-phone')
 const feedbackMenu = document.querySelector('.feedback-menu')
 const requestCallMenu = document.querySelector('.request-call')
-const cancelFeedbackMenu = document.querySelector('.feedback-menu-btn')
-const cancelRequestCallMenu = document.querySelector('#cancelRequestCallMenu')
-const moreText = document.getElementById("more");
-const readMore = document.getElementById('read-more');
-const readMoreText = document.getElementById('read-more-text');
-const iconDropDownShow = document.getElementById('icon-dropdown-show')
-const showAllFirstSlider = document.getElementById('show-all-brands-section-icon')
-const readMoreBrands = document.getElementById('read-more-brands')
-const readMoreBrandsText = document.getElementById('read-more-brands-text')
-const swiperDiv = document.querySelector('#swiper-brand-section')
-const swiperDivVariety = document.querySelector('#swiper-variety')
-const readMoreBrandsVariety = document.getElementById('read-more-brands-variety')
-const readMoreBrandsVarietyText = document.getElementById('read-more-brands-variety-text')
-const showAllSecondSlider = document.getElementById("show-all-brands-section-icon-variety")
+const cancelFeedbackMenu = feedbackMenu.querySelector('.feedback-menu-btn')
+const cancelRequestCallMenu = requestCallMenu.querySelector('.cancelRequestCallMenu')
+const moreText = main.querySelector(".more-title-text");
+const readMore = main.querySelector('.services__read-more-text');
+const readMoreText = readMore.querySelector('.read-more-text');
+const iconDropDownShow = readMore.querySelector('.services__icon-dropdown-show')
+const showAllFirstSlider = main.querySelector('.show-all-brands-section-icon')
+const readMoreBrands = main.querySelector('.read-more-brands')
+const readMoreBrandsText = readMoreBrands.querySelector('.read-more-brands-text')
+const swiperDiv = main.querySelector('#swiper-brand-section')
+const swiperDivVariety = main.querySelector('#swiper-variety')
+const readMoreBrandsVariety = main.querySelector('.read-more-brands-variety')
+const readMoreBrandsVarietyText = readMoreBrandsVariety.querySelector('.read-more-brands-variety-text')
+const showAllSecondSlider = readMoreBrandsVariety.querySelector(".show-all-brands-section-icon-variety")
 
 
 
+//слайдер
+let sliders
+const swiperContainer = document.querySelector('.swiper')
+function createSlider() {
+  if (window.innerWidth < 760) {
+    if (!swiperContainer.classList.contains('swiper-initialized')) {
+      sliders = new Swiper('.swiper', {
+        modules: [Navigation, Pagination],
+        direction: 'horizontal',
+          spaceBetween: 15,
+          slidesPerView: 'auto',
+          breakpoints: {
+            700: {
+              slidesPerView: 4,
+              spaceBetween: 10,
+              enabled: false,
+            },
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+      })
+    }
+  } else {
+    if (
+      swiperContainer.classList.contains('swiper-initialized') &&
+      !sliders[0].destroyed
+    ) {
+      for (let slider of sliders) {
+        slider.destroy()
+      }
+    }
+  }
+}
+createSlider()
 
+window.addEventListener('resize', () => {
+  createSlider()
+})
 
 
 
 // читать далее/скрыть - титульная секция
-
-readMore.onclick = function(){
-  if(moreText.classList.contains('active') == false){
-  moreText.classList.add('active')
+const readMoreTitleFunc = (event) => {
+  if(!moreText.classList.contains('active')){
   readMoreText.textContent = 'Скрыть'
-  iconDropDownShow.classList.add('rotate')
-}else{
-  moreText.classList.remove('active')
+  }else{
   readMoreText.textContent = 'Читать далее'
-  iconDropDownShow.classList.remove('rotate')
 }
-}
+moreText.classList.toggle('active')
+iconDropDownShow.classList.toggle('rotate--icon')
+};
+readMore.addEventListener('click', readMoreTitleFunc)
 
 
 // показать/скрыть - бренд-секция
-
-readMoreBrands.onclick = function(){
-  if((swiperDiv.classList.contains('showed')) == false){
-  swiperDiv.classList.add('showed')
+const readMoreBrandsFunc  = (event) => {
+  if(!swiperDiv.classList.contains('showed')){
   readMoreBrandsText.textContent = 'Скрыть';
-  showAllFirstSlider.classList.add('rotate');
   }else{
-    swiperDiv.classList.remove('showed');
-    readMoreBrandsText.textContent = 'Показать все';
-    showAllFirstSlider.classList.remove('rotate');
+  readMoreBrandsText.textContent = 'Показать все';
   }
+  swiperDiv.classList.toggle('showed')
+  showAllFirstSlider.classList.toggle('rotate--icon');
 }
+readMoreBrands.addEventListener('click', readMoreBrandsFunc)
 
 // показать/скрыть - ремонт-секция
 
-readMoreBrandsVariety.onclick = function(){
-  if((swiperDivVariety.classList.contains('showed')) == false){
-  swiperDivVariety.classList.add('showed')
+const readMoreBrandsVarietyFunc = (event) => {
+  if(!swiperDivVariety.classList.contains('showed')){
   readMoreBrandsVarietyText.textContent = 'Скрыть';
-  showAllSecondSlider.classList.add('rotate');
   }else{
-    swiperDivVariety.classList.remove('showed');
     readMoreBrandsVarietyText.textContent = 'Показать все';
-    showAllFirstSlider.classList.remove('rotate');
   }
+  swiperDivVariety.classList.toggle('showed');
+  showAllSecondSlider.classList.toggle('rotate--icon');
 }
+readMoreBrandsVariety.addEventListener('click', readMoreBrandsVarietyFunc)
 
 
 // бургер кнопки и взаимодействие с меню
@@ -104,18 +139,8 @@ main.addEventListener('click', (e) => {
     header.classList.remove('active')
     main.classList.remove('active')
     body.classList.remove('modal-open')
-  }
-  if(!menuPadding.classList.contains(e.target)){
-    feedbackMenu.classList.remove('active')
-    header.classList.remove('active')
-    main.classList.remove('active')
-    body.classList.remove('modal-open')
-  }
-  if(!menuPadding.classList.contains(e.target)){
     requestCallMenu.classList.remove('active')
-    header.classList.remove('active')
-    main.classList.remove('active')
-    body.classList.remove('modal-open')
+    feedbackMenu.classList.remove('active')
   }
 })
 
@@ -125,9 +150,9 @@ messageBtn.addEventListener('click', () =>{
   header.classList.add('active')
   main.classList.add('active')
   body.classList.add('modal-open')
-  if(requestCallMenu.classList.contains('active') === false){
+  if(!requestCallMenu.classList.contains('active')){
   feedbackMenu.classList.add('active')
-}if(requestCallMenu.classList.contains('active') === true){
+}if(requestCallMenu.classList.contains('active')){
   requestCallMenu.classList.remove('active')
   feedbackMenu.classList.add('active')
 }
@@ -142,9 +167,9 @@ messageBtnHeader.addEventListener('click', () =>{
   body.classList.add('modal-open')
   header.classList.add('active')
   main.classList.add('active')
-  if(requestCallMenu.classList.contains('active') === false){
+  if(!requestCallMenu.classList.contains('active')){
     feedbackMenu.classList.add('active')
-  }if(requestCallMenu.classList.contains('active') === true){
+  }if(requestCallMenu.classList.contains('active')){
     requestCallMenu.classList.remove('active')
     feedbackMenu.classList.add('active')
   }
@@ -160,9 +185,9 @@ phoneBtnHeader.addEventListener('click', ()=>{
   header.classList.add('active')
   main.classList.add('active')
   body.classList.add('modal-open')
-  if(feedbackMenu.classList.contains('active') === false){
+  if(!feedbackMenu.classList.contains('active')){
     requestCallMenu.classList.add('active')
-  }if(feedbackMenu.classList.contains('active') === true){
+  }if(feedbackMenu.classList.contains('active')){
     feedbackMenu.classList.remove('active')
     requestCallMenu.classList.add('active')
   }
@@ -171,9 +196,9 @@ phoneBtn.addEventListener('click', ()=>{
   header.classList.add('active')
   main.classList.add('active')
   body.classList.add('modal-open')
-  if(feedbackMenu.classList.contains('active') === false){
+  if(!feedbackMenu.classList.contains('active')){
     requestCallMenu.classList.add('active')
-  }if(feedbackMenu.classList.contains('active') === true){
+  }if(feedbackMenu.classList.contains('active')){
     feedbackMenu.classList.remove('active')
     requestCallMenu.classList.add('active')
   }
@@ -181,24 +206,3 @@ phoneBtn.addEventListener('click', ()=>{
 
 
 
-
-// тут все понятно ;)
-
-let newSwiper = new Swiper('.swiper', {
-  direction: 'horizontal',
-  spaceBetween: 15,
-  slidesPerView: 'auto',
-    
-  breakpoints: {
-    700: {
-      slidesPerView: 4,
-      spaceBetween: 10,
-      enabled: false,
-    },
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    
-  },
-});
