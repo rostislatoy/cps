@@ -557,9 +557,6 @@ input[type="radio"]:checked + label {
       border-radius: 6px;
       border: 2px solid #41F6D7; }
 
-#more {
-  display: none; }
-
 .services__about {
   display: flex;
   padding-top: 24px;
@@ -591,9 +588,9 @@ input[type="radio"]:checked + label {
   .services__about-info.text {
     padding-right: 15px; }
 
-#more {
+.more-title-text {
   display: none; }
-  #more.active {
+  .more-title-text.active {
     display: inline; }
 
 .icon-dropdown.show,
@@ -642,7 +639,7 @@ input[type="radio"]:checked + label {
 .header-navbar-tool {
   margin: 0 6px; }
 
-#icon-dropdown-show.rotate {
+#icon-dropdown-show.rotate--icon {
   transform: rotate(180deg); }
 
 @font-face {
@@ -764,11 +761,7 @@ input[type="radio"]:checked + label {
 
 @media screen and (min-height: 650px) {
   .burger__actions {
-    padding-top: 20px; }
-  .feedback-menu {
-    max-width: 440px;
-    padding-left: 28px;
-    padding-right: 28px; } }
+    padding-top: 20px; } }
 
 @media screen and (min-height: 750px) {
   .burger__actions {
@@ -1084,7 +1077,11 @@ input[type="radio"]:checked + label {
 
 @media screen and (min-width: 600px) {
   .post-title {
-    width: 420px !important; } }
+    width: 420px !important; }
+  .feedback-menu {
+    max-width: 440px;
+    padding-left: 28px;
+    padding-right: 28px; } }
 
 @media screen and (max-width: 700px) {
   .footer {
@@ -1397,7 +1394,7 @@ input[type="radio"]:checked + label {
   font-size: 14px;
   width: 100%; }
 
-#show-all-brands-section-icon.rotate {
+#show-all-brands-section-icon.rotate--icon {
   transform: rotate(180deg); }
 
 #swiper-brand-section.showed {
@@ -1410,7 +1407,7 @@ input[type="radio"]:checked + label {
   .tablet-view {
     display: inline-flex; } }
 
-#show-all-brands-section-icon-variety.rotate {
+#show-all-brands-section-icon-variety.rotate--icon {
   transform: rotate(180deg); }
 
 #swiper-variety.showed {
