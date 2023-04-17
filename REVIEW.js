@@ -35,12 +35,13 @@ const showAllSecondSlider = readMoreBrandsVariety.querySelector(".show-all-brand
 
 
 
-//слайдер
+
 let sliders
+const breakpointSwiper = window.matchMedia("(max-width: 760px)")
 const swiperContainer = document.querySelector('.swiper')
 function createSlider() {
-  if (window.innerWidth < 760) {
-    if (!swiperContainer.classList.contains('swiper-initialized')) {
+  
+  if (breakpointSwiper.matches && (!swiperContainer.classList.contains('swiper-initialized'))) {
       sliders = new Swiper('.swiper', {
         modules: [Navigation, Pagination],
         direction: 'horizontal',
@@ -58,7 +59,7 @@ function createSlider() {
             clickable: true,
           },
       })
-    }
+    
   } else {
     if (
       swiperContainer.classList.contains('swiper-initialized') &&
@@ -66,19 +67,19 @@ function createSlider() {
     ) {
       for (let slider of sliders) {
         slider.destroy()
+        console.log('hfwyuevhbfcsof')
       }
     }
   }
 }
 createSlider()
 
-window.addEventListener('resize', () => {
+breakpointSwiper.addEventListener('change', function(event){
   createSlider()
 })
 
 
 
-// читать далее/скрыть - титульная секция
 const readMoreTitleFunc = (event) => {
   if(!moreText.classList.contains('active')){
   readMoreText.textContent = 'Скрыть'
@@ -91,7 +92,7 @@ iconDropDownShow.classList.toggle('rotate--icon')
 readMore.addEventListener('click', readMoreTitleFunc)
 
 
-// показать/скрыть - бренд-секция
+
 const readMoreBrandsFunc  = (event) => {
   if(!swiperDiv.classList.contains('showed')){
   readMoreBrandsText.textContent = 'Скрыть';
@@ -102,8 +103,6 @@ const readMoreBrandsFunc  = (event) => {
   showAllFirstSlider.classList.toggle('rotate--icon');
 }
 readMoreBrands.addEventListener('click', readMoreBrandsFunc)
-
-// показать/скрыть - ремонт-секция
 
 const readMoreBrandsVarietyFunc = (event) => {
   if(!swiperDivVariety.classList.contains('showed')){
@@ -117,23 +116,26 @@ const readMoreBrandsVarietyFunc = (event) => {
 readMoreBrandsVariety.addEventListener('click', readMoreBrandsVarietyFunc)
 
 
-// бургер кнопки и взаимодействие с меню
 
-burgerBtn.addEventListener('click',() =>  {
+
+function burgerOpen(){
   menu.classList.add('active')
   header.classList.add('active')
   main.classList.add('active')
   body.classList.add('modal-open')
-})
+}
+burgerBtn.addEventListener('click', burgerOpen)
 
-menuBtnBack.addEventListener('click',() => {
+
+function burgerClose() {
   menu.classList.remove('active')
   header.classList.remove('active')
   main.classList.remove('active')
   body.classList.remove('modal-open')
-})
+}
+menuBtnBack.addEventListener('click', burgerClose)
 
-main.addEventListener('click', (e) => {
+function mainRemoveClasses(e) {
   if(!menuPadding.classList.contains(e.target)){
     menu.classList.remove('active')
     header.classList.remove('active')
@@ -142,11 +144,11 @@ main.addEventListener('click', (e) => {
     requestCallMenu.classList.remove('active')
     feedbackMenu.classList.remove('active')
   }
-})
+}
+main.addEventListener('click',mainRemoveClasses)
 
-// модалки
 
-messageBtn.addEventListener('click', () =>{
+function messageModalOpen(){
   header.classList.add('active')
   main.classList.add('active')
   body.classList.add('modal-open')
@@ -156,53 +158,36 @@ messageBtn.addEventListener('click', () =>{
   requestCallMenu.classList.remove('active')
   feedbackMenu.classList.add('active')
 }
-})
-cancelFeedbackMenu.addEventListener('click', ()=>{
+}
+messageBtn.addEventListener('click',messageModalOpen)
+messageBtnHeader.addEventListener('click', messageModalOpen)
+
+function messageModalClose(){
   feedbackMenu.classList.remove('active')
   header.classList.remove('active')
   main.classList.remove('active')
   body.classList.remove('modal-open')
-})
-messageBtnHeader.addEventListener('click', () =>{
-  body.classList.add('modal-open')
+}
+cancelFeedbackMenu.addEventListener('click', messageModalClose)
+
+ function phoneModalOpen(){
   header.classList.add('active')
   main.classList.add('active')
-  if(!requestCallMenu.classList.contains('active')){
-    feedbackMenu.classList.add('active')
-  }if(requestCallMenu.classList.contains('active')){
-    requestCallMenu.classList.remove('active')
-    feedbackMenu.classList.add('active')
+  body.classList.add('modal-open')
+  if(!feedbackMenu.classList.contains('active')){
+    requestCallMenu.classList.add('active')
+  }if(feedbackMenu.classList.contains('active')){
+    feedbackMenu.classList.remove('active')
+    requestCallMenu.classList.add('active')
   }
-})
+}
+phoneBtn.addEventListener('click', phoneModalOpen)
+phoneBtnHeader.addEventListener('click', phoneModalOpen)
 
-cancelRequestCallMenu.addEventListener('click', ()=>{
+ function phoneModalClose(){
   requestCallMenu.classList.remove('active')
   header.classList.remove('active')
   main.classList.remove('active')
   body.classList.remove('modal-open')
-})
-phoneBtnHeader.addEventListener('click', ()=>{
-  header.classList.add('active')
-  main.classList.add('active')
-  body.classList.add('modal-open')
-  if(!feedbackMenu.classList.contains('active')){
-    requestCallMenu.classList.add('active')
-  }if(feedbackMenu.classList.contains('active')){
-    feedbackMenu.classList.remove('active')
-    requestCallMenu.classList.add('active')
-  }
-})
-phoneBtn.addEventListener('click', ()=>{
-  header.classList.add('active')
-  main.classList.add('active')
-  body.classList.add('modal-open')
-  if(!feedbackMenu.classList.contains('active')){
-    requestCallMenu.classList.add('active')
-  }if(feedbackMenu.classList.contains('active')){
-    feedbackMenu.classList.remove('active')
-    requestCallMenu.classList.add('active')
-  }
-})
-
-
-
+}
+cancelRequestCallMenu.addEventListener('click', phoneModalClose)
