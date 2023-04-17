@@ -12,7 +12,7 @@
 <body>
   <header class="header header--fixed">
     <div class="header__container burger-side">
-      <button id="burger-btn" class="around-btn header__burger header__item">
+      <button id="burger-btn" class="around-btn header__burger header__item burger-btn">
         <img class="icon header__burger-icon" src="img/burger-icon.svg">
       </button>
       <object class="header__logo header__item" id="header-logo">
@@ -39,7 +39,7 @@
  <aside class="burger" id="menu">
  <div class="burger__body-container">
   <div class="burger__header-container">
-  <button class="around-btn burger__close btn-close" id="back-burger-btn">
+  <button class="around-btn burger__close btn-close back-burger-btn" id="back-burger-btn">
     <img class="icon header-navbar-cancel" src="img/cancel-icon.svg">
   </button>
   <object class="logo burger__logo">
@@ -114,13 +114,13 @@
   <div class="services__about"> 
   <div class="services__about-infos">
     <p class="services__about-info text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br> <br>
-      Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span id="more"> Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+      Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="more-title-text"> Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
       Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
       Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span>
     </p>
-    <button class="services__about-info btn" id="read-more" tabindex="14">
-      <img src="img/read-more-icon.svg" id="icon-dropdown-show" class="icon-dropdown show">
-      <span id="read-more-text">Читать далее</span>
+    <button class="services__about-info btn services__read-more-text" tabindex="14">
+      <img src="img/read-more-icon.svg" class="icon-dropdown show services__icon-dropdown-show">
+      <span class="read-more-text" id="read-more-text">Читать далее</span>
     </button>
 </div>
     <div class="services__about-infos">
@@ -297,9 +297,9 @@
   </div>
   <div class="swiper-pagination"></div>
 </div> 
-<button class="services__about-info btn tablet-view" id="read-more-brands" tabindex="26">
-  <img src="img/read-more-icon.svg" id="show-all-brands-section-icon" class="icon-dropdown show tablet-view">
-  <span id="read-more-brands-text" class="btn show tablet-view">Показать все</span>
+<button class="services__about-info btn tablet-view read-more-brands" tabindex="26">
+  <img src="img/read-more-icon.svg" class="icon-dropdown show tablet-view show-all-brands-section-icon">
+  <span class="btn show tablet-view read-more-brands-text">Показать все</span>
 </button>
 </div>
 </section>
@@ -410,9 +410,9 @@
   </div>
   <div class="swiper-pagination"></div>
 </div> 
-<button class="services__about-info btn tablet-view" id="read-more-brands-variety" tabindex="35">
-  <img src="img/read-more-icon.svg" class="icon-dropdown show tablet-view" id="show-all-brands-section-icon-variety">
-  <span class="btn show tablet-view" id="read-more-brands-variety-text">Показать все</span>
+<button class="services__about-info btn tablet-view read-more-brands-variety" tabindex="35">
+  <img src="img/read-more-icon.svg" class="icon-dropdown show tablet-view show-all-brands-section-icon-variety">
+  <span class="btn show tablet-view read-more-brands-variety-text">Показать все</span>
 </button>
 </div>
 </section>
@@ -562,7 +562,7 @@
 <div class="feedback-menu request-call">
   <div class="modal__body-container feedback-box">
     <div class="feedback-box header-btn">
-      <button class="around-btn btn-close feedback-menu-btn" id="cancelRequestCallMenu">
+      <button class="around-btn btn-close feedback-menu-btn cancelRequestCallMenu" id="cancelRequestCallMenu">
         <img class="icon header-navbar-cancel" src="img/cancel-icon.svg">
       </button> 
     </div>
