@@ -118,21 +118,24 @@ readMoreBrandsVariety.addEventListener('click', readMoreBrandsVarietyFunc)
 
 
 
-burgerBtn.addEventListener('click',() =>  {
+function burgerOpen(){
   menu.classList.add('active')
   header.classList.add('active')
   main.classList.add('active')
   body.classList.add('modal-open')
-})
+}
+burgerBtn.addEventListener('click', burgerOpen)
 
-menuBtnBack.addEventListener('click',() => {
+
+function burgerClose() {
   menu.classList.remove('active')
   header.classList.remove('active')
   main.classList.remove('active')
   body.classList.remove('modal-open')
-})
+}
+menuBtnBack.addEventListener('click', burgerClose)
 
-main.addEventListener('click', (e) => {
+function mainRemoveClasses(e) {
   if(!menuPadding.classList.contains(e.target)){
     menu.classList.remove('active')
     header.classList.remove('active')
@@ -141,11 +144,11 @@ main.addEventListener('click', (e) => {
     requestCallMenu.classList.remove('active')
     feedbackMenu.classList.remove('active')
   }
-})
+}
+main.addEventListener('click',mainRemoveClasses)
 
 
-
-messageBtn.addEventListener('click', () =>{
+function messageModalOpen(){
   header.classList.add('active')
   main.classList.add('active')
   body.classList.add('modal-open')
@@ -155,53 +158,40 @@ messageBtn.addEventListener('click', () =>{
   requestCallMenu.classList.remove('active')
   feedbackMenu.classList.add('active')
 }
-})
-cancelFeedbackMenu.addEventListener('click', ()=>{
+}
+messageBtn.addEventListener('click',messageModalOpen)
+messageBtnHeader.addEventListener('click', messageModalOpen)
+
+function messageModalClose(){
   feedbackMenu.classList.remove('active')
   header.classList.remove('active')
   main.classList.remove('active')
   body.classList.remove('modal-open')
-})
-messageBtnHeader.addEventListener('click', () =>{
-  body.classList.add('modal-open')
+}
+cancelFeedbackMenu.addEventListener('click', messageModalClose)
+
+ function phoneModalOpen(){
   header.classList.add('active')
   main.classList.add('active')
-  if(!requestCallMenu.classList.contains('active')){
-    feedbackMenu.classList.add('active')
-  }if(requestCallMenu.classList.contains('active')){
-    requestCallMenu.classList.remove('active')
-    feedbackMenu.classList.add('active')
+  body.classList.add('modal-open')
+  if(!feedbackMenu.classList.contains('active')){
+    requestCallMenu.classList.add('active')
+  }if(feedbackMenu.classList.contains('active')){
+    feedbackMenu.classList.remove('active')
+    requestCallMenu.classList.add('active')
   }
-})
+}
+phoneBtn.addEventListener('click', phoneModalOpen)
+phoneBtnHeader.addEventListener('click', phoneModalOpen)
 
-cancelRequestCallMenu.addEventListener('click', ()=>{
+ function phoneModalClose(){
   requestCallMenu.classList.remove('active')
   header.classList.remove('active')
   main.classList.remove('active')
   body.classList.remove('modal-open')
-})
-phoneBtnHeader.addEventListener('click', ()=>{
-  header.classList.add('active')
-  main.classList.add('active')
-  body.classList.add('modal-open')
-  if(!feedbackMenu.classList.contains('active')){
-    requestCallMenu.classList.add('active')
-  }if(feedbackMenu.classList.contains('active')){
-    feedbackMenu.classList.remove('active')
-    requestCallMenu.classList.add('active')
-  }
-})
-phoneBtn.addEventListener('click', ()=>{
-  header.classList.add('active')
-  main.classList.add('active')
-  body.classList.add('modal-open')
-  if(!feedbackMenu.classList.contains('active')){
-    requestCallMenu.classList.add('active')
-  }if(feedbackMenu.classList.contains('active')){
-    feedbackMenu.classList.remove('active')
-    requestCallMenu.classList.add('active')
-  }
-})
+}
+cancelRequestCallMenu.addEventListener('click', phoneModalClose)
+
 
 
 
