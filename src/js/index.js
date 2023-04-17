@@ -35,12 +35,13 @@ const showAllSecondSlider = readMoreBrandsVariety.querySelector(".show-all-brand
 
 
 
-//слайдер
+
 let sliders
+const breakpointSwiper = window.matchMedia("(max-width: 760px)")
 const swiperContainer = document.querySelector('.swiper')
 function createSlider() {
-  if (window.innerWidth < 760) {
-    if (!swiperContainer.classList.contains('swiper-initialized')) {
+  
+  if (breakpointSwiper.matches && (!swiperContainer.classList.contains('swiper-initialized'))) {
       sliders = new Swiper('.swiper', {
         modules: [Navigation, Pagination],
         direction: 'horizontal',
@@ -58,7 +59,7 @@ function createSlider() {
             clickable: true,
           },
       })
-    }
+    
   } else {
     if (
       swiperContainer.classList.contains('swiper-initialized') &&
@@ -66,19 +67,19 @@ function createSlider() {
     ) {
       for (let slider of sliders) {
         slider.destroy()
+        console.log('hfwyuevhbfcsof')
       }
     }
   }
 }
 createSlider()
 
-window.addEventListener('resize', () => {
+breakpointSwiper.addEventListener('change', function(event){
   createSlider()
 })
 
 
 
-// читать далее/скрыть - титульная секция
 const readMoreTitleFunc = (event) => {
   if(!moreText.classList.contains('active')){
   readMoreText.textContent = 'Скрыть'
@@ -91,7 +92,7 @@ iconDropDownShow.classList.toggle('rotate--icon')
 readMore.addEventListener('click', readMoreTitleFunc)
 
 
-// показать/скрыть - бренд-секция
+
 const readMoreBrandsFunc  = (event) => {
   if(!swiperDiv.classList.contains('showed')){
   readMoreBrandsText.textContent = 'Скрыть';
@@ -102,8 +103,6 @@ const readMoreBrandsFunc  = (event) => {
   showAllFirstSlider.classList.toggle('rotate--icon');
 }
 readMoreBrands.addEventListener('click', readMoreBrandsFunc)
-
-// показать/скрыть - ремонт-секция
 
 const readMoreBrandsVarietyFunc = (event) => {
   if(!swiperDivVariety.classList.contains('showed')){
@@ -117,7 +116,7 @@ const readMoreBrandsVarietyFunc = (event) => {
 readMoreBrandsVariety.addEventListener('click', readMoreBrandsVarietyFunc)
 
 
-// бургер кнопки и взаимодействие с меню
+
 
 burgerBtn.addEventListener('click',() =>  {
   menu.classList.add('active')
@@ -144,7 +143,7 @@ main.addEventListener('click', (e) => {
   }
 })
 
-// модалки
+
 
 messageBtn.addEventListener('click', () =>{
   header.classList.add('active')
